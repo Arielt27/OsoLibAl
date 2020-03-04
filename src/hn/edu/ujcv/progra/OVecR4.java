@@ -1,4 +1,6 @@
 package hn.edu.ujcv.progra;
 
-public class OVecR4 {
+public class OVecR4
+{
+
 }

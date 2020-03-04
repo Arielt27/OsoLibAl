@@ -10,12 +10,12 @@ public class OMat2x2
 
     // CONSTRUCTORES
 
-    public OMat2x2(){}
+    public OMat2x2(){} // Constructor por defecto
 
-    public OMat2x2(OVecR2 a){}
+    public OMat2x2(OVecR2 a){} // Constructor con argumento
 
     public OMat2x2(double m11, double m12,
-                   double m21, double m22)
+                   double m21, double m22) // Constructor de conveniencia
     {
         this.col1 = new OVecR2(m11, m21);
         this.col2 = new OVecR2(m12, m22);
