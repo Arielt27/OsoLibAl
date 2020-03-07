@@ -46,6 +46,11 @@ public class OVecR2
 
     // METODOS
 
+    public OVecR2 suma(OVecR2 b)
+    {
+        return new OVecR2();
+    }
+
     public OVecR2 resta(OVecR2 b)
     {
         //TODO: implementar
@@ -62,5 +67,12 @@ public class OVecR2
     {
         //TODO: implementar
         return 0.0f;
+    }
+
+    // METODO TO STRING
+    @Override
+    public String toString()
+    {
+        return "i: " + getX() + "j: " + getY();
     }
 }

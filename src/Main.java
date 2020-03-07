@@ -8,10 +8,8 @@ public class Main
     {
         System.out.println("***LIBRERIA DE ALGEBRA LINEAL***");
 
-        OVecR2 V1 = new OVecR2(1,2);
+        OVecR2 V1 = new OVecR2(6,2);
 
         System.out.println(V1);
-
-
     }
 }

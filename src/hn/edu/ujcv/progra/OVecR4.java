@@ -1,12 +1,12 @@
 package hn.edu.ujcv.progra;
 
-public class OVecR4 {
-    // miembros
+public class OVecR4
+{
+// MIEMBROS O ATRIBUTOS
 
+    // CONSTRUCTORES
 
-    // accesoras y mutadoras
+    // ACCESORAS Y MUTADORAS
 
-    // metodos
-
-    // constructores
+    // METODOS
 }
