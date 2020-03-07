@@ -48,13 +48,12 @@ public class OVecR2
 
     public OVecR2 suma(OVecR2 b)
     {
-        return new OVecR2();
+        return new OVecR2(this.x + b.x, this.y + b.y);
     }
 
     public OVecR2 resta(OVecR2 b)
     {
-        //TODO: implementar
-        return new OVecR2();
+        return new OVecR2(this.x + b.x, this.y - b.y);
     }
 
     public double prodPunto(OVecR2 b)
