@@ -32,7 +32,7 @@ public class OVecR2
         this.x = x;
     }
 
-      //Get y Set Para Y
+      // Get y Set Para Y
     public double getY()
     {
         return y;
@@ -53,7 +53,7 @@ public class OVecR2
 
     public OVecR2 resta(OVecR2 b)
     {
-        return new OVecR2(this.x + b.x, this.y - b.y);
+        return new OVecR2(this.x - b.x, this.y - b.y);
     }
 
     public double prodPunto(OVecR2 b)
@@ -72,6 +72,6 @@ public class OVecR2
     @Override
     public String toString()
     {
-        return "i: " + getX() + "j: " + getY();
+        return " i: " + getX() + " j: " + getY();
     }
 }
