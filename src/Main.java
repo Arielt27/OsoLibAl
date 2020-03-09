@@ -10,11 +10,11 @@ public class Main
 
           // Vectores en R2
 
-        OVecR2 V1 = new OVecR2(6,4);
+        OVecR2 V1 = new OVecR2(-5,4);
 
-        OVecR2 V2 = new OVecR2(4,3);
+        OVecR2 V2 = new OVecR2(-3,-8);
 
-        OVecR2 V3 = new OVecR2(3,8);
+        OVecR2 V3 = new OVecR2(2,6);
 
           // Vectores en R3
 
@@ -40,7 +40,7 @@ public class Main
         System.out.println("***LIBRERIA DE ALGEBRA LINEAL***");
         System.out.println(" ");
 
-        System.out.println("VECTORES EN R2 ");
+        System.out.println("VECTORES EN R2");
         System.out.println(" ");
 
         System.out.println("El Vector 1 es: " + V1);                       // Mostrando Objeto Vector llamado V1
@@ -58,9 +58,13 @@ public class Main
         System.out.println("Resta de Vectores en R2 " + V3.resta(V2));     // Aplicando Metodo Resta de Clase OvecR2
         System.out.println(" ");
 
+        System.out.println("Producto Punto de Vectores en R2 "
+                                           + V1.prodPunto(V2));            // Aplicando Metodo prodPunto de Clase OVecR4
+        System.out.println(" ");
+
           // Vectores en R3
 
-        System.out.println("VECTORES EN R3 ");
+        System.out.println("VECTORES EN R3");
         System.out.println(" ");
 
         System.out.println("El Vector 1 es: " + Ve1);                      // Mostrando Objeto Vector llamado Ve1
@@ -78,9 +82,13 @@ public class Main
         System.out.println("Resta de Vectores en R3 " + Ve1.resta(Ve3));   // Aplicando Metodo Resta de Clase OvecR3
         System.out.println(" ");
 
+        System.out.println("Producto Punto de Vectores en R3 "
+                                           + Ve1.prodPunto(Ve2));          // Aplicando Metodo prodPunto de Clase OVecR3
+        System.out.println(" ");
+
           // VECTORES EN R4
 
-        System.out.println("VECTORES EN R4 ");
+        System.out.println("VECTORES EN R4");
         System.out.println(" ");
 
         System.out.println("El Vector 1 es: " + Vec1);                     // Mostrando Objeto Vector llamado Vec1
@@ -96,6 +104,10 @@ public class Main
         System.out.println(" ");
 
         System.out.println("Resta de Vectores en R4 " + Vec2.resta(Vec3)); // Aplicando Metodo Resta de Clase OvecR4
+        System.out.println(" ");
+
+        System.out.println("Producto Punto de Vectores en R4 "
+                                           + Vec1.prodPunto(Vec2));        // Aplicando Metodo prodPunto de Clase OVecR4
         System.out.println(" ");
 
     }

@@ -84,6 +84,16 @@ public class OVecR4
         return new OVecR4(this.x - b.x, this.y - b.y, this.z - b.z, this.t + b.t);
     }
 
+    public double prodPunto(OVecR4 b)
+    {
+        // x   y   z   t
+        // x1  y1  z1  t1
+        // PP = x*x1 + y*y1 + z*z1 + t*t1
+
+        double Sol = this.x * b.x + this.y * b.y + this.z * b.z + this.t * b.t;
+        return Sol;
+    }
+
 
     // METODO TO STRING
     @Override

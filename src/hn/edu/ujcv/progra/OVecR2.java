@@ -58,8 +58,13 @@ public class OVecR2
 
     public double prodPunto(OVecR2 b)
     {
-        //TODO: implementar
-        return 0.0f;
+        // x   y
+        // x1  y1
+        // PP = x*x1 + y*y1
+
+        double Sol;
+        Sol = this.x * b.x + this.y * b.y;
+        return Sol;
     }
 
     public double magnitud()
@@ -67,6 +72,7 @@ public class OVecR2
         //TODO: implementar
         return 0.0f;
     }
+
 
     // METODO TO STRING
     @Override

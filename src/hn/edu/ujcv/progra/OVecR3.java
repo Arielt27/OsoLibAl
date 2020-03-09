@@ -68,21 +68,19 @@ public class OVecR3
         return new OVecR3(this.x - b.x, this.y - b.y, this.z - b.z);
     }
 
-    /*public OVecR3 prodCruz(OVecR3 b)
+    /*public double prodCruz(OVecR3 b)
     {
-        //
-        //  x  y  z
-        //  x1 y1 z1       i = y * z1 - z * y1;
-        //                 j = - ();
-        //                 k = ;
-        //
-        return new OVecR3();
+
     }*/
 
     public double prodPunto(OVecR3 b)
     {
-        //TODO: implementar
-        return 0.0f;
+        // x   y   z
+        // x1  y1  z1
+        // PP = x*x1 + y*y1 + z*z1
+
+        double Sol = this.x * b.x + this.y * b.y + this.z * b.z;
+        return Sol;
     }
 
     public double magnitud()
