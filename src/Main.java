@@ -22,7 +22,11 @@ public class Main
 
         OVecR3 Ve2 = new OVecR3(1,3,4);
 
-        OVecR3 Ve3 = new OVecR3(5,4,7);
+        OVecR3 Ve3 = new OVecR3(-3,-2,5);
+
+        OVecR3 Ve4 = new OVecR3(6,-10,-1);
+
+
 
           // Vectores en R4
 
@@ -89,8 +93,14 @@ public class Main
                                            + Ve1.prodPunto(Ve2));          // Aplicando Metodo prodPunto de Clase OVecR3
         System.out.println(" ");
 
-        System.out.println("Magnitud Del Vector en R3: " + Ve3.magnitud()); // Aplicando Metodo Magnitud de Clase OVecR3
+        System.out.println("ProdCruz de Vectores en R3 "
+                                           + Ve3.prodCruz(Ve4));           // Aplicando Metodo prodCruz de Clase OvecR3
         System.out.println(" ");
+
+        System.out.println("Magnitud Del Vector en R3: " + Ve3.magnitud());// Aplicando Metodo Magnitud de Clase OVecR3
+        System.out.println(" ");
+
+
 
           // VECTORES EN R4
 

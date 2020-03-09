@@ -68,10 +68,21 @@ public class OVecR3
         return new OVecR3(this.x - b.x, this.y - b.y, this.z - b.z);
     }
 
-    /*public double prodCruz(OVecR3 b)
+    public String prodCruz(OVecR3 b)
     {
+        // i   j   k
+        // x   y   z
+        // x1  y1  z1
+        // PC = +(y*z1 - y1*z)i -(x*z1 - x1*z)j +(x*y1 - x1*y)k
 
-    }*/
+        double det1 = (this.y*b.z - b.y*this.z);
+        double det2 = -(this.x*b.z - b.x*this.z);
+        double det3 = (this.x*b.y - b.x*this.y);
+
+        String pc = det1 + "i+" + det2 + "j+" + det3;
+
+        return pc;
+    }
 
     public double prodPunto(OVecR3 b)
     {
