@@ -14,7 +14,7 @@ public class Main
 
         OVecR2 V2 = new OVecR2(-3,-8);
 
-        OVecR2 V3 = new OVecR2(2,6);
+        OVecR2 V3 = new OVecR2(-11,-2);
 
           // Vectores en R3
 
@@ -59,7 +59,10 @@ public class Main
         System.out.println(" ");
 
         System.out.println("Producto Punto de Vectores en R2 "
-                                           + V1.prodPunto(V2));            // Aplicando Metodo prodPunto de Clase OVecR4
+                                           + V1.prodPunto(V2));            // Aplicando Metodo prodPunto de Clase OVecR2
+        System.out.println(" ");
+
+        System.out.println("Magnitud Del Vector en R2: " + V3.magnitud()); // Aplicando Metodo Magnitud de Clase OVecR2
         System.out.println(" ");
 
           // Vectores en R3
@@ -86,6 +89,9 @@ public class Main
                                            + Ve1.prodPunto(Ve2));          // Aplicando Metodo prodPunto de Clase OVecR3
         System.out.println(" ");
 
+        System.out.println("Magnitud Del Vector en R3: " + Ve3.magnitud()); // Aplicando Metodo Magnitud de Clase OVecR3
+        System.out.println(" ");
+
           // VECTORES EN R4
 
         System.out.println("VECTORES EN R4");
@@ -108,6 +114,10 @@ public class Main
 
         System.out.println("Producto Punto de Vectores en R4 "
                                            + Vec1.prodPunto(Vec2));        // Aplicando Metodo prodPunto de Clase OVecR4
+        System.out.println(" ");
+
+        System.out.println("Magnitud Del Vector en R4: "
+                                           + Vec3.magnitud());             // Aplicando Metodo Magnitud de Clase OVecR4
         System.out.println(" ");
 
     }

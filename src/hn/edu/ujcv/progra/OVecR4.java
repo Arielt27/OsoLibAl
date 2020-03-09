@@ -94,6 +94,15 @@ public class OVecR4
         return Sol;
     }
 
+    public double magnitud()
+    {
+        // x   y   z   t
+        // magnitud = sqrt(pow(x) + pow(y) + pow(z) + pow(t))
+
+        double mag = Math.sqrt(Math.pow(x,2) + Math.pow(y,2) + Math.pow(z,2) + Math.pow(t,2));
+        return mag;
+    }
+
 
     // METODO TO STRING
     @Override

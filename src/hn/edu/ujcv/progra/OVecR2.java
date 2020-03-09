@@ -1,4 +1,5 @@
 package hn.edu.ujcv.progra;
+import java.math.*;
 
 public class OVecR2
 {
@@ -69,8 +70,11 @@ public class OVecR2
 
     public double magnitud()
     {
-        //TODO: implementar
-        return 0.0f;
+        //x   y
+        // magnitud = sqrt(pow(x) + pow (y))
+
+        double Mag = Math.sqrt(Math.pow(x,2) + Math.pow(y,2));
+        return Mag;
     }
 
 

@@ -85,8 +85,11 @@ public class OVecR3
 
     public double magnitud()
     {
-        //TODO: implementar
-        return 0.0f;
+        //x   y   z
+        // magnitud = sqrt(pow(x) + pow (y) + pow(z))
+
+        double Mag = Math.sqrt(Math.pow(x,2) + Math.pow(y,2) + Math.pow(z,2));
+        return Mag;
     }
 
     // METODO TO STRING
