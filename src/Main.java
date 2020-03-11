@@ -43,6 +43,8 @@ public class Main
 
         OMat2x2 M3 = new OMat2x2(5,3,-1,4);
 
+        OMat2x2 M4 = new OMat2x2(7,5,-2,9);
+
 
         // PROGRAMA PRINCIPAL
 
@@ -61,6 +63,12 @@ public class Main
         System.out.println("La Matriz 2 es: " + M2);                       // Mostrando Objeto Matriz llamado M2
         System.out.println(" ");
 
+        System.out.println("La Matriz 3 es: " + M3);                       // Mostrando Objeto Matriz llamado M3
+        System.out.println(" ");
+
+        System.out.println("La Matriz 4 es: " + M4);                       // Mostrando Objeto Matriz llamado M4
+        System.out.println(" ");
+
         System.out.println("La Suma de Matrices es: " + M1.suma(M2));      // Aplicando Metodo Suma de Clase OMat2x2
         System.out.println(" ");
 
@@ -70,7 +78,10 @@ public class Main
         System.out.println("La Multip. de Matrices es: " + M1.mult(M2));   // Aplicando Metodo multi de Clase OMat2x2
         System.out.println(" ");
 
-        System.out.println("El Det. de Matriz C es: " + M3.determinante());// Aplicando Metodo multi de Clase OMat2x2
+        System.out.println("El Det. de Matriz C es: " + M3.determinante());// Aplicando Metodo determinante de Clase OMat2x2
+        System.out.println(" ");
+
+        System.out.println("La Inversa de Matriz D es: " + M4.inversa());  // Aplicando Metodo inversa de Clase OMat2x2
         System.out.println(" ");
 
 

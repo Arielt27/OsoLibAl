@@ -1,7 +1,6 @@
 package hn.edu.ujcv.progra;
 
-public class OMat2x2
-{
+public class OMat2x2 {
     // MIEMBROS O ATRIBUTOS
 
     private double m11;
@@ -18,10 +17,10 @@ public class OMat2x2
 
     public OMat2x2(double m11, double m12, double m21, double m22) // Constructor de Conveniencia
     {
-       this.m11 = m11;
-       this.m12 = m12;
-       this.m21 = m21;
-       this.m22 = m22;
+        this.m11 = m11;
+        this.m12 = m12;
+        this.m21 = m21;
+        this.m22 = m22;
     }
 
     //public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
@@ -29,59 +28,51 @@ public class OMat2x2
 
     // ACCESORAS Y MUTADORAS
 
-      // getM11
+    // getM11
 
-    public double getM11()
-    {
+    public double getM11() {
         return m11;
     }
 
-      // getM12
+    // getM12
 
-    public double getM12()
-    {
+    public double getM12() {
         return m12;
     }
 
-      // getM21
+    // getM21
 
-    public double getM21()
-    {
+    public double getM21() {
         return m21;
     }
 
-      // getM22
+    // getM22
 
-    public double getM22()
-    {
+    public double getM22() {
         return m22;
     }
 
-      // Set M11
+    // Set M11
 
-    public void setM11(double m11)
-    {
+    public void setM11(double m11) {
         this.m11 = m11;
     }
 
     // Set M12
 
-    public void setM12(double m12)
-    {
+    public void setM12(double m12) {
         this.m12 = m12;
     }
 
     // Set M21
 
-    public void setM21(double m21)
-    {
+    public void setM21(double m21) {
         this.m21 = m21;
     }
 
     // Set M22
 
-    public void setM22(double m22)
-    {
+    public void setM22(double m22) {
         this.m22 = m22;
     }
 
@@ -94,11 +85,20 @@ public class OMat2x2
         return new OMat2x2();
     }*/
 
-    /*public OMat2x2 inversa()
+    public OMat2x2 inversa()
     {
-        //TODO: implementar
-        return new OMat2x2();
-    }*/
+        // m11   m12
+        // m21   m22
+
+        // det = m11 * m22 - m21 * m12;
+        // inversa = (1/det)
+
+        //  m22   -m12
+        // -m21    m11
+
+        return new OMat2x2( (1) / ((m11 * m22) - (m21 * m12)) * m22, (1) / ((m11 * m22) - (m21 * m12)) * -m12,
+                            (1) / ((m11 * m22) - (m21 * m12)) * -m21, (1) / ((m11 * m22) - (m21 * m12)) * m11);
+    }
 
     public OMat2x2 suma(OMat2x2 b)
     {
