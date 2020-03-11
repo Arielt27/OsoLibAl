@@ -33,13 +33,15 @@ public class Main
 
         OVecR4 Vec2 = new OVecR4(1,2,3,4);
 
-        OVecR4 Vec3 = new OVecR4(9,1,0,6);*/
+        OVecR4 Vec3 = new OVecR4(9,1,0,6);
 
-          // Matrices 2x2
+          // Matrices 2x2*/
 
-        OMat2x2 M1 = new OMat2x2(2,1,3,5);
+        OMat2x2 M1 = new OMat2x2(-5,3,4,7);
 
-        OMat2x2 M2 = new OMat2x2(6,4,1,8);
+        OMat2x2 M2 = new OMat2x2(9,0,2,-5);
+
+        OMat2x2 M3 = new OMat2x2(5,3,-1,4);
 
 
         // PROGRAMA PRINCIPAL
@@ -63,6 +65,12 @@ public class Main
         System.out.println(" ");
 
         System.out.println("La Resta de Matrices es: " + M1.resta(M2));    // Aplicando Metodo Resta de Clase OMat2x2
+        System.out.println(" ");
+
+        System.out.println("La Multip. de Matrices es: " + M1.mult(M2));   // Aplicando Metodo multi de Clase OMat2x2
+        System.out.println(" ");
+
+        System.out.println("El Det. de Matriz C es: " + M3.determinante());// Aplicando Metodo multi de Clase OMat2x2
         System.out.println(" ");
 
 

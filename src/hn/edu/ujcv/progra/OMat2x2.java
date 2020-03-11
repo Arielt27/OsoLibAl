@@ -110,23 +110,21 @@ public class OMat2x2
         return new OMat2x2(this.m11 - b.m11, this.m12 - b.m12, this.m21 - b.m21, this.m22 - b.m22);
     }
 
-    /*public OMat2x2 mult(OVecR2 b)
+    public OMat2x2 mult(OMat2x2 b)
     {
-        //TODO: implementar
-        //    m11  m12
-        //    m21  m22
-        //
-        //
-        // m11   =  a.m11 * b.m11 + a.m12 * b.m21;
-        // m12   =  a.m11 * b.m12 + a.m12 * b.m22;
-        //
-        return new OMat2x2();
-    }*/
+        return new OMat2x2((this.m11 * b.m11) + (this.m12 * b.m21), (this.m11 * b.m12) + (this.m12 * b.m22), (this.m21 * b.m11) + (this.m22 * b.m21), (this.m21 * b.m12) + (this.m22 * b.m22));
+    }
 
     public double determinante()
     {
-        //TODO: implementar
-        return 0.0f;
+        // m11   m12
+        // m21   m22
+
+        // det = m11 * m22 - m21 * m12;
+
+        double Det = (m11 * m22) - (m21 * m12);
+
+        return Det;
     }
 
     // METODOS DE LA CLASE
