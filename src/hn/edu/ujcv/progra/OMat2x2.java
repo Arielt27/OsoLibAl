@@ -102,12 +102,12 @@ public class OMat2x2
 
     public OMat2x2 suma(OMat2x2 b)
     {
-        return new OMat2x2(this.m11 + m11, this.m12 + m12, this.m21 + m21, this.m22 + m22);
+        return new OMat2x2(this.m11 + b.m11, this.m12 + b.m12, this.m21 + b.m21, this.m22 + b.m22);
     }
 
     public OMat2x2 resta(OMat2x2 b)
     {
-        return new OMat2x2(this.m11 - m11, this.m12 - m12, this.m21 - m21, this.m22 - m22);
+        return new OMat2x2(this.m11 - b.m11, this.m12 - b.m12, this.m21 - b.m21, this.m22 - b.m22);
     }
 
     /*public OMat2x2 mult(OVecR2 b)
