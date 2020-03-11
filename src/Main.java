@@ -1,3 +1,4 @@
+import hn.edu.ujcv.progra.OMat2x2;
 import hn.edu.ujcv.progra.OVecR2;
 import hn.edu.ujcv.progra.OVecR3;
 import hn.edu.ujcv.progra.OVecR4;
@@ -6,11 +7,11 @@ public class Main
 {
     public static void main(String[] args)
     {
-        // CREACIÓN DE LOS OBJETOS (VECTORES)
+        // CREACIÓN DE LOS OBJETOS (VECTOREmS)
 
           // Vectores en R2
 
-        OVecR2 V1 = new OVecR2(-5,4);
+        /*OVecR2 V1 = new OVecR2(-5,4);
 
         OVecR2 V2 = new OVecR2(-3,-8);
 
@@ -26,23 +27,46 @@ public class Main
 
         OVecR3 Ve4 = new OVecR3(6,-10,-1);
 
-
-
           // Vectores en R4
 
         OVecR4 Vec1 = new OVecR4(5,7,6,3);
 
         OVecR4 Vec2 = new OVecR4(1,2,3,4);
 
-        OVecR4 Vec3 = new OVecR4(9,1,0,6);
+        OVecR4 Vec3 = new OVecR4(9,1,0,6);*/
+
+          // Matrices 2x2
+
+        OMat2x2 M1 = new OMat2x2(2,1,3,5);
+
+        OMat2x2 M2 = new OMat2x2(6,4,1,8);
 
 
         // PROGRAMA PRINCIPAL
 
-          // Vectores en R2
-
         System.out.println("***LIBRERIA DE ALGEBRA LINEAL***");
         System.out.println(" ");
+
+
+          // Matrices 2x2
+
+        System.out.println("MATRICES 2x2");
+        System.out.println(" ");
+
+        System.out.println("La Matriz 1 es: " + M1);                       // Mostrando Objeto Matriz llamado M1
+        System.out.println(" ");
+
+        System.out.println("La Matriz 2 es: " + M2);                       // Mostrando Objeto Matriz llamado M2
+        System.out.println(" ");
+
+        System.out.println("La Suma de Matrices es: " + M1.suma(M2));      // Aplicando Metodo Suma de Clase OMat2x2
+        System.out.println(" ");
+
+        System.out.println("La Resta de Matrices es: " + M1.resta(M2));    // Aplicando Metodo Resta de Clase OMat2x2
+        System.out.println(" ");
+
+
+          /*// Vectores en R2
 
         System.out.println("VECTORES EN R2");
         System.out.println(" ");
@@ -81,6 +105,9 @@ public class Main
         System.out.println(" ");
 
         System.out.println("El Vector 3 es: " + Ve3);                      // Mostrando Objeto Vector llamado Ve3
+        System.out.println(" ");
+
+        System.out.println("El Vector 4 es: " + Ve4);                      // Mostrando Objeto Vector llamado Ve4
         System.out.println(" ");
 
         System.out.println("Suma de Vectores en R3 " + Ve2.suma(Ve1));     // Aplicando Metodo Suma de Clase OvecR3
@@ -128,7 +155,7 @@ public class Main
 
         System.out.println("Magnitud Del Vector en R4: "
                                            + Vec3.magnitud());             // Aplicando Metodo Magnitud de Clase OVecR4
-        System.out.println(" ");
+        System.out.println(" ");*/
 
     }
 }

@@ -4,70 +4,113 @@ public class OMat2x2
 {
     // MIEMBROS O ATRIBUTOS
 
-    private double col1;
-    private double col2;
+    private double m11;
+    private double m12;
+    private double m21;
+    private double m22;
 
 
     // CONSTRUCTORES
 
-    public OMat2x2(){} // Constructor Por Defecto
+    //public OMat2x2(){} // Constructor Por Defecto
 
-    public OMat2x2(OVecR2 a){} // Constructor con argumentos
+    //public OMat2x2(OVecR2 a){} // Constructor con argumentos
 
-    public OMat2x2(double m11, double m12,
-                   double m21, double m22) // Constructor de Conveniencia
+    public OMat2x2(double m11, double m12, double m21, double m22) // Constructor de Conveniencia
     {
-       this.col1 = col1;
-       this.col2 = col2;
+       this.m11 = m11;
+       this.m12 = m12;
+       this.m21 = m21;
+       this.m22 = m22;
     }
 
-    public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
+    //public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
 
 
     // ACCESORAS Y MUTADORAS
 
-    //getColX
+      // getM11
 
-    public double getCol1()
+    public double getM11()
     {
-        return col1;
+        return m11;
     }
 
-    //getColY
+      // getM12
 
-    public double getCol2()
+    public double getM12()
     {
-        return col2;
+        return m12;
+    }
+
+      // getM21
+
+    public double getM21()
+    {
+        return m21;
+    }
+
+      // getM22
+
+    public double getM22()
+    {
+        return m22;
+    }
+
+      // Set M11
+
+    public void setM11(double m11)
+    {
+        this.m11 = m11;
+    }
+
+    // Set M12
+
+    public void setM12(double m12)
+    {
+        this.m12 = m12;
+    }
+
+    // Set M21
+
+    public void setM21(double m21)
+    {
+        this.m21 = m21;
+    }
+
+    // Set M22
+
+    public void setM22(double m22)
+    {
+        this.m22 = m22;
     }
 
 
     // METODOS
 
-    public OMat2x2 transpuesta()
+    /*public OMat2x2 transpuesta()
     {
 
         return new OMat2x2();
-    }
+    }*/
 
-    public OMat2x2 inversa()
-    {
-        //TODO: implementar
-        return new OMat2x2();
-    }
-
-    public OMat2x2 suma(OVecR2 b)
+    /*public OMat2x2 inversa()
     {
         //TODO: implementar
         return new OMat2x2();
-    }
+    }*/
 
-    public OMat2x2 resta(OVecR2 b)
+    public OMat2x2 suma(OMat2x2 b)
     {
-        //TODO: implementar
-        return new OMat2x2();
+        return new OMat2x2(this.m11 + m11, this.m12 + m12, this.m21 + m21, this.m22 + m22);
     }
 
-    public OMat2x2 mult(OVecR2 b)
+    public OMat2x2 resta(OMat2x2 b)
+    {
+        return new OMat2x2(this.m11 - m11, this.m12 - m12, this.m21 - m21, this.m22 - m22);
+    }
+
+    /*public OMat2x2 mult(OVecR2 b)
     {
         //TODO: implementar
         //    m11  m12
@@ -78,7 +121,7 @@ public class OMat2x2
         // m12   =  a.m11 * b.m12 + a.m12 * b.m22;
         //
         return new OMat2x2();
-    }
+    }*/
 
     public double determinante()
     {
@@ -102,9 +145,17 @@ public class OMat2x2
         return new OMat2x2(m11,m12,m21,m22);
     }
 
-    public static OMat2x2 identidad()
+    /*public static OMat2x2 identidad()
     {
         //TODO: implementar
         return new OMat2x2();
+    }*/
+
+
+    // METODO TO STRING
+    @Override
+    public String toString()
+    {
+        return " m11: " + getM11() + " m12: " + getM12() + " m21: " + getM21() + " m22 " + getM22();
     }
 }
