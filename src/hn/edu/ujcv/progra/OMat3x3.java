@@ -174,5 +174,42 @@ public class OMat3x3
                            this.m31 + b.m31, this.m32 + b.m32, this.m33 + b.m33);
     }
 
+    public OMat3x3 Resta(OMat3x3 b)
+    {
+        return new OMat3x3(this.m11 - b.m11, this.m12 - b.m12, this.m13 - b.m13,
+                           this.m21 - b.m21, this.m22 - b.m22, this.m23 - b.m23,
+                           this.m31 - b.m31, this.m32 - b.m32, this.m33 - b.m33);
+    }
+
+    public OMat3x3 multi(OMat3x3 b)
+    {
+        // m11   m12   m13  *  b11   b12   b13
+        // m21   m22   m23  *  b21   b22   b23
+        // m31   m32   m33  *  b31   b32   b33
+
+        // c11 = this.m11 * b.m11 + this.m12 * b.m21 + this.m13 * b.m31
+        // c12 = this.m11 * b.m12 + this.m12 * b.m22 + this.m13 * b.m32
+        // c13 = this.m11 * b.m13 + this.m12 * b.m23 + this.m13 * b.m33
+        // c21 = this.m21 * b.m11 + this.m22 * b.m21 + this.m23 * b.m23
+        // c22 = this.m21 * b.m12 + this.m22 * b.m22 + this.m23 * b.m32
+        // c23 = this.m21 * b.m13 + this.m22 * b.m23 + this.m23 * b.m33
+        // c31 = this.m31 * b.m11 + this.m32 * b.m21 + this.m33 * b.m31
+        // c32 = this.m31 * b.m12 + this.m32 * b.m22 + this.m33 * b.m32
+        // c33 = this.m31 * b.m13 + this.m32 * b.m23 + this.m33 * b.m33
+
+        return new OMat3x3(this.m11 * b.m11 + this.m12 * b.m21 + this.m13 * b.m31, this.m11 * b.m12 + this.m12 * b.m22 + this.m13 * b.m32, this.m11 * b.m13 + this.m12 * b.m23 + this.m13 * b.m33,
+                           this.m21 * b.m11 + this.m22 * b.m21 + this.m23 * b.m31, this.m21 * b.m12 + this.m22 * b.m22 + this.m23 * b.m32, this.m21 * b.m13 + this.m22 * b.m23 + this.m23 * b.m33,
+                           this.m31 * b.m11 + this.m32 * b.m21 + this.m33 * b.m31, this.m31 * b.m12 + this.m32 * b.m22 + this.m33 * b.m32, this.m31 * b.m13 + this.m32 * b.m23 + this.m33 * b.m33);
+    }
+
+    // METODO TO STRING
+    @Override
+    public String toString()
+    {
+        return " m11: " + getM11() + " m12: " + getM12() + " m13: " + getM13() +
+               " m21: " + getM21() + " m22: " + getM22() + " m23: " + getM23() +
+               " m31: " + getM31() + " m32: " + getM32() + " m33: " + getM33();
+    }
+
 
 }

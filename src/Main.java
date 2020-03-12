@@ -1,7 +1,4 @@
-import hn.edu.ujcv.progra.OMat2x2;
-import hn.edu.ujcv.progra.OVecR2;
-import hn.edu.ujcv.progra.OVecR3;
-import hn.edu.ujcv.progra.OVecR4;
+import hn.edu.ujcv.progra.*;
 
 public class Main
 {
@@ -37,13 +34,20 @@ public class Main
 
           // Matrices 2x2*/
 
-        OMat2x2 M1 = new OMat2x2(-5,3,4,7);
+        /*OMat2x2 M1 = new OMat2x2(-5,3,4,7);
 
         OMat2x2 M2 = new OMat2x2(9,0,2,-5);
 
         OMat2x2 M3 = new OMat2x2(5,3,-1,4);
 
-        OMat2x2 M4 = new OMat2x2(7,5,-2,9);
+        OMat2x2 M4 = new OMat2x2(7,5,-2,9);*/
+
+          // Matrices 3x3
+
+        OMat3x3 Ma1 = new OMat3x3(0,-7,3,2,4,-1,12,7,-6);
+
+        OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
+
 
 
         // PROGRAMA PRINCIPAL
@@ -51,10 +55,34 @@ public class Main
         System.out.println("***LIBRERIA DE ALGEBRA LINEAL***");
         System.out.println(" ");
 
+          // Matrices 3x3
+
+        System.out.println("MATRICES 3x3");
+        System.out.println(" ");
+
+        System.out.println("La Matriz 1 es: " + Ma1);                       // Mostrando Objeto Matriz llamado Ma1
+        System.out.println(" ");
+
+        System.out.println("La Matriz 1 es: " + Ma2);                       // Mostrando Objeto Matriz llamado Ma2
+        System.out.println(" ");
+
+        System.out.println("La Suma de Matrices es: " + Ma1.Suma(Ma2));      // Aplicando Metodo Suma de Clase OMat3x3
+        System.out.println(" ");
+
+        System.out.println("La Resta de Matrices es: " + Ma1.Resta(Ma2));      // Aplicando Metodo Resta de Clase OMat3x3
+        System.out.println(" ");
+
+        System.out.println("La Mult. de Matrices es: " + Ma1.multi(Ma2));      // Aplicando Metodo multi de Clase OMat3x3
+        System.out.println(" ");
+
+
+
+
+
 
           // Matrices 2x2
 
-        System.out.println("MATRICES 2x2");
+        /*System.out.println("MATRICES 2x2");
         System.out.println(" ");
 
         System.out.println("La Matriz 1 es: " + M1);                       // Mostrando Objeto Matriz llamado M1
@@ -85,7 +113,7 @@ public class Main
         System.out.println(" ");
 
         System.out.println("La Transpuesta de Matriz D es: " + M4.transpuesta()); // Aplicando Metodo transpuesta de Clase OMat2x2
-        System.out.println(" ");
+        System.out.println(" ");*/
 
 
           /*// Vectores en R2
