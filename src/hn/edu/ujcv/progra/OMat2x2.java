@@ -28,49 +28,49 @@ public class OMat2x2 {
 
     // ACCESORAS Y MUTADORAS
 
-    // getM11
+      // getM11
 
     public double getM11() {
         return m11;
     }
 
-    // getM12
+      // getM12
 
     public double getM12() {
         return m12;
     }
 
-    // getM21
+      // getM21
 
     public double getM21() {
         return m21;
     }
 
-    // getM22
+      // getM22
 
     public double getM22() {
         return m22;
     }
 
-    // Set M11
+      // Set M11
 
     public void setM11(double m11) {
         this.m11 = m11;
     }
 
-    // Set M12
+      // Set M12
 
     public void setM12(double m12) {
         this.m12 = m12;
     }
 
-    // Set M21
+      // Set M21
 
     public void setM21(double m21) {
         this.m21 = m21;
     }
 
-    // Set M22
+      // Set M22
 
     public void setM22(double m22) {
         this.m22 = m22;
@@ -135,7 +135,6 @@ public class OMat2x2 {
         return Det;
     }
 
-    // METODOS DE LA CLASE
     public static OMat2x2 rot(double alpha)
     {
         // cos a  -sin a
