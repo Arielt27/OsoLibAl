@@ -1,6 +1,7 @@
 package hn.edu.ujcv.progra;
 
-public class OMat2x2 {
+public class OMat2x2
+{
     // MIEMBROS O ATRIBUTOS
 
     private double m11;

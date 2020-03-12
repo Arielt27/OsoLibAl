@@ -19,7 +19,7 @@ public class OMat3x3
 
     //public OMat3x3(){}
 
-    public OMat3x3(OVecR3 a){}
+    //public OMat3x3(OVecR3 a){}
 
     public OMat3x3(double m11, double m12, double m13,
                    double m21, double m22, double m23,
@@ -166,6 +166,13 @@ public class OMat3x3
 
 
     // METODOS
+
+    public OMat3x3 Suma(OMat3x3 b)
+    {
+        return new OMat3x3(this.m11 + b.m11, this.m12 + b.m12, this.m13 + b.m13,
+                           this.m21 + b.m21, this.m22 + b.m22, this.m23 + b.m23,
+                           this.m31 + b.m31, this.m32 + b.m32, this.m33 + b.m33);
+    }
 
 
 }
