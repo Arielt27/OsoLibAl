@@ -202,6 +202,22 @@ public class OMat3x3
                            this.m31 * b.m11 + this.m32 * b.m21 + this.m33 * b.m31, this.m31 * b.m12 + this.m32 * b.m22 + this.m33 * b.m32, this.m31 * b.m13 + this.m32 * b.m23 + this.m33 * b.m33);
     }
 
+
+    public OMat3x3 transpuesta()
+    {
+        // m11   m12   m13
+        // m21   m22   m23
+        // m31   m32   m33
+
+        // transpuesta
+
+        // m11  m21  m31
+        // m12  m22  m32
+        // m13  m23  m33
+
+        return new OMat3x3(m11, m21, m31, m12, m22, m32, m13, m23, m33);
+    }
+
     // METODO TO STRING
     @Override
     public String toString()
