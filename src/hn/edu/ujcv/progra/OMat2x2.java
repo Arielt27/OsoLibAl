@@ -79,11 +79,18 @@ public class OMat2x2 {
 
     // METODOS
 
-    /*public OMat2x2 transpuesta()
+    public OMat2x2 transpuesta()
     {
+        // m11    m12
+        // m21    m22
 
-        return new OMat2x2();
-    }*/
+        // transpuesta
+
+        // m11   m21
+        // m12   m22
+
+        return new OMat2x2(m11,m21,m12,m22);
+    }
 
     public OMat2x2 inversa()
     {
@@ -112,7 +119,8 @@ public class OMat2x2 {
 
     public OMat2x2 mult(OMat2x2 b)
     {
-        return new OMat2x2((this.m11 * b.m11) + (this.m12 * b.m21), (this.m11 * b.m12) + (this.m12 * b.m22), (this.m21 * b.m11) + (this.m22 * b.m21), (this.m21 * b.m12) + (this.m22 * b.m22));
+        return new OMat2x2((this.m11 * b.m11) + (this.m12 * b.m21), (this.m11 * b.m12) + (this.m12 * b.m22),
+                           (this.m21 * b.m11) + (this.m22 * b.m21), (this.m21 * b.m12) + (this.m22 * b.m22));
     }
 
     public double determinante()
@@ -130,7 +138,7 @@ public class OMat2x2 {
     // METODOS DE LA CLASE
     public static OMat2x2 rot(double alpha)
     {
-        // cos a   -sin a
+        // cos a  -sin a
         // sin a   cos a
 
         double  m11,m12,
@@ -140,6 +148,7 @@ public class OMat2x2 {
         m12 = -Math.sin(alpha);
         m21 = Math.sin(alpha);
         m22 = Math.cos(alpha);
+
         return new OMat2x2(m11,m12,m21,m22);
     }
 

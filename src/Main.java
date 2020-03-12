@@ -84,6 +84,9 @@ public class Main
         System.out.println("La Inversa de Matriz D es: " + M4.inversa());  // Aplicando Metodo inversa de Clase OMat2x2
         System.out.println(" ");
 
+        System.out.println("La Transpuesta de Matriz D es: " + M4.transpuesta()); // Aplicando Metodo transpuesta de Clase OMat2x2
+        System.out.println(" ");
+
 
           /*// Vectores en R2
 
