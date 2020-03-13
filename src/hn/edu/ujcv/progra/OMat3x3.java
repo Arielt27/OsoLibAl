@@ -218,6 +218,11 @@ public class OMat3x3
         return new OMat3x3(m11, m21, m31, m12, m22, m32, m13, m23, m33);
     }
 
+    /*public OMat3x3 inversa()
+    {
+        return new OMat3x3();
+    }*/
+
     // METODO TO STRING
     @Override
     public String toString()
@@ -227,5 +232,15 @@ public class OMat3x3
                " m31: " + getM31() + " m32: " + getM32() + " m33: " + getM33();
     }
 
+    /*public OMat3x3 identidad()
+    {
+        // m11  m12  m13
+        // m21  m22  m23
+        // m31  m32  m33
+
+        // identidad =
+
+        return new OMat3x3();
+    }*/
 
 }

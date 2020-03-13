@@ -48,6 +48,8 @@ public class Main
 
         OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
 
+        OMat3x3 Ma3 = new OMat3x3(1,2,3,4,5,6,9,8,8);
+
 
 
         // PROGRAMA PRINCIPAL
@@ -74,6 +76,9 @@ public class Main
 
         System.out.println("La Mult. de Matrices es: " + Ma1.multi(Ma2));      // Aplicando Metodo multi de Clase OMat3x3
         System.out.println(" ");
+
+        System.out.println("La Mult. de Matrices es: " + Ma3.transpuesta());
+        System.out.println(Ma3);
 
 
 
