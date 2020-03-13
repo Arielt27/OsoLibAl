@@ -181,7 +181,7 @@ public class OMat3x3
                            this.m31 - b.m31, this.m32 - b.m32, this.m33 - b.m33);
     }
 
-    public OMat3x3 multi(OMat3x3 b)
+    public OMat3x3 Multi(OMat3x3 b)
     {
         // m11   m12   m13  *  b11   b12   b13
         // m21   m22   m23  *  b21   b22   b23
@@ -218,19 +218,25 @@ public class OMat3x3
         return new OMat3x3(m11, m21, m31, m12, m22, m32, m13, m23, m33);
     }
 
+    public double determinante()
+    {
+        // m11   m12   m13
+        // m21   m22   m23
+        // m31   m32   m33
+        // m11   m12   m13
+        // m21   m22   m23
+
+        // Se aplica Método de Sarrus para obtener determinante de una Matriz 3x3
+
+        double det = ((m11 * m22 * m33) + (m21 * m32 * m13) + (m31 * m12 * m23)) - ((m13 * m22 * m31) + (m23 * m32 * m11) + (m33 * m12 * m21));
+
+        return det;
+    }
+
     /*public OMat3x3 inversa()
     {
         return new OMat3x3();
     }*/
-
-    // METODO TO STRING
-    @Override
-    public String toString()
-    {
-        return " m11: " + getM11() + " m12: " + getM12() + " m13: " + getM13() +
-               " m21: " + getM21() + " m22: " + getM22() + " m23: " + getM23() +
-               " m31: " + getM31() + " m32: " + getM32() + " m33: " + getM33();
-    }
 
     /*public OMat3x3 identidad()
     {
@@ -243,4 +249,12 @@ public class OMat3x3
         return new OMat3x3();
     }*/
 
+    // METODO TO STRING
+    @Override
+    public String toString()
+    {
+        return " m11: " + getM11() + " m12: " + getM12() + " m13: " + getM13() +
+               " m21: " + getM21() + " m22: " + getM22() + " m23: " + getM23() +
+               " m31: " + getM31() + " m32: " + getM32() + " m33: " + getM33();
+    }
 }

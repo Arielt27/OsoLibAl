@@ -48,7 +48,7 @@ public class Main
 
         OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
 
-        OMat3x3 Ma3 = new OMat3x3(1,2,3,4,5,6,9,8,8);
+        OMat3x3 Ma3 = new OMat3x3(-2,4,5,6,7,-3,3,0,2);
 
 
 
@@ -62,27 +62,26 @@ public class Main
         System.out.println("MATRICES 3x3");
         System.out.println(" ");
 
-        System.out.println("La Matriz 1 es: " + Ma1);                       // Mostrando Objeto Matriz llamado Ma1
+        System.out.println("La Matriz 1 es: " + Ma1);                        // Mostrando Objeto Matriz llamado Ma1
         System.out.println(" ");
 
-        System.out.println("La Matriz 1 es: " + Ma2);                       // Mostrando Objeto Matriz llamado Ma2
+        System.out.println("La Matriz 1 es: " + Ma2);                        // Mostrando Objeto Matriz llamado Ma2
         System.out.println(" ");
 
         System.out.println("La Suma de Matrices es: " + Ma1.Suma(Ma2));      // Aplicando Metodo Suma de Clase OMat3x3
         System.out.println(" ");
 
-        System.out.println("La Resta de Matrices es: " + Ma1.Resta(Ma2));      // Aplicando Metodo Resta de Clase OMat3x3
+        System.out.println("La Resta de Matrices es: " + Ma1.Resta(Ma2));    // Aplicando Metodo Resta de Clase OMat3x3
         System.out.println(" ");
 
-        System.out.println("La Mult. de Matrices es: " + Ma1.multi(Ma2));      // Aplicando Metodo multi de Clase OMat3x3
+        System.out.println("La Mult. de Matrices es: " + Ma1.Multi(Ma2));    // Aplicando Metodo multi de Clase OMat3x3
         System.out.println(" ");
 
-        System.out.println("La Mult. de Matrices es: " + Ma3.transpuesta());
+        System.out.println("La Transp. de Matriz es: " + Ma3.transpuesta()); // Aplicando Metodo transpuesta de Clase OMat3x3
         System.out.println(Ma3);
 
-
-
-
+        System.out.println("El det. de Matriz es: " + Ma3.determinante());   // Aplicando Metodo transpuesta de Clase OMat3x3
+        System.out.println(" ");
 
 
           // Matrices 2x2
