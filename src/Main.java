@@ -44,11 +44,23 @@ public class Main
 
           // Matrices 3x3
 
-        OMat3x3 Ma1 = new OMat3x3(0,-7,3,2,4,-1,12,7,-6);
+        /*OMat3x3 Ma1 = new OMat3x3(0,-7,3,2,4,-1,12,7,-6);
 
         OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
 
-        OMat3x3 Ma3 = new OMat3x3(-2,4,5,6,7,-3,3,0,2);
+        OMat3x3 Ma3 = new OMat3x3(-2,4,5,6,7,-3,3,0,2);*/
+
+          // Matrices 4x4
+
+        OMat4x4 M1 = new OMat4x4(1,2,3,4,
+                                 5,6,7,8,
+                                 9,10,11,12,
+                                13, 14,15,16);
+
+        OMat4x4 M2 = new OMat4x4(-1,5,-1,6,
+                                  4,5,10,8,
+                                 -4,8,9,3,
+                                  0,-8,-5,3);
 
 
 
@@ -57,7 +69,25 @@ public class Main
         System.out.println("***LIBRERIA DE ALGEBRA LINEAL***");
         System.out.println(" ");
 
-          // Matrices 3x3
+          // Matrices 4x4
+
+        System.out.println("MATRICES 4x4");
+        System.out.println(" ");
+
+        System.out.println("La Matriz 1 es: " + M1);                        // Mostrando Objeto Matriz llamado M1
+        System.out.println(" ");
+
+        System.out.println("La Matriz 2 es: " + M2);                        // Mostrando Objeto Matriz llamado M2
+        System.out.println(" ");
+
+        System.out.println("La Suma de Matrices es: " + M1.suma(M2));       // Aplicando Metodo Suma de Clase OMat4x4
+        System.out.println(" ");
+
+        System.out.println("La Resta de Matrices es: " + M1.resta(M2));     // Aplicando Metodo Resta de Clase OMat4x4
+        System.out.println(" ");
+
+
+          /*// Matrices 3x3
 
         System.out.println("MATRICES 3x3");
         System.out.println(" ");
@@ -81,7 +111,7 @@ public class Main
         System.out.println(Ma3);
 
         System.out.println("El det. de Matriz es: " + Ma3.determinante());   // Aplicando Metodo transpuesta de Clase OMat3x3
-        System.out.println(" ");
+        System.out.println(" ");*/
 
 
           // Matrices 2x2

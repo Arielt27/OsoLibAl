@@ -277,6 +277,21 @@ public class OMat4x4
 
     // METODOS
 
+    public OMat4x4 suma(OMat4x4 b)
+    {
+        return new OMat4x4(this.m11 + b.m11, this.m12 + b.m12, this.m13 + b.m13, this.m14 + b.m14,
+                           this.m21 + b.m21, this.m22 + b.m22, this.m23 + b.m23, this.m24 + b.m24,
+                           this.m31 + b.m31, this.m32 + b.m32, this.m33 + b.m33, this.m34 + b.m34,
+                           this.m41 + b.m41, this.m42 + b.m42, this.m43 + b.m43, this.m44 + b.m44);
+    }
+
+    public OMat4x4 resta(OMat4x4 b)
+    {
+        return new OMat4x4(this.m11 - b.m11, this.m12 - b.m12, this.m13 - b.m13, this.m14 - b.m14,
+                           this.m21 - b.m21, this.m22 - b.m22, this.m23 - b.m23, this.m24 - b.m24,
+                           this.m31 - b.m31, this.m32 - b.m32, this.m33 - b.m33, this.m34 - b.m34,
+                           this.m41 - b.m41, this.m42 - b.m42, this.m43 - b.m43, this.m44 - b.m44);
+    }
 
 
 
