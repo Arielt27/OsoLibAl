@@ -293,7 +293,40 @@ public class OMat4x4
                            this.m41 - b.m41, this.m42 - b.m42, this.m43 - b.m43, this.m44 - b.m44);
     }
 
+    /*public OMat4x4 multi()
+    {
+        return new OMat4x4();
+    }*/
 
+    public OMat4x4 transpuesta()
+    {
+        // m11   m12   m13   m14
+        // m21   m22   m23   m24
+        // m31   m32   m33   m34
+        // m41   m42   m43   m44
+
+        // tranpuesta
+
+        // m11   m21   m31   m41
+        // m12   m22   m32   m42
+        // m13   m23   m33   m43
+        // m14   m24   m34   m44
+
+        return new OMat4x4(m11, m21, m31, m41,
+                           m12, m22, m32, m42,
+                           m13, m23, m33, m43,
+                           m14, m24, m34, m44);
+    }
+
+    /*public OMat4x4 inversa()
+    {
+        return new OMat4x4();
+    }
+
+    public OMat4x4 identidad()
+    {
+        return new OMat4x4();
+    }*/
 
 
       // METODO TO STRING
