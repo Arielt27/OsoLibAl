@@ -293,10 +293,40 @@ public class OMat4x4
                            this.m41 - b.m41, this.m42 - b.m42, this.m43 - b.m43, this.m44 - b.m44);
     }
 
-    /*public OMat4x4 multi()
+    public OMat4x4 multi(OMat4x4 b)
     {
-        return new OMat4x4();
-    }*/
+        // m11   m12   m13  m14 *  b11   b12   b13   b14
+        // m21   m22   m23  m24 *  b21   b22   b23   b24
+        // m31   m32   m33  m34 *  b31   b32   b33   b34
+        // m41   m42   m43  m44 *  b41   b42   b43   b44
+
+        // multi
+
+        // c11 = this.m11 * b.m11 + this.m12 * b.m21 + this.m13 * b.m31 + this.m14 * b.m41
+        // c12 = this.m11 * b.m12 + this.m12 * b.m22 + this.m13 * b.m32 + this.m14 * b.m42
+        // c13 = this.m11 * b.m13 + this.m12 * b.m23 + this.m13 * b.m33 + this.m14 * b.m43
+        // c14 = this.m11 * b.m14 + this.m12 * b.m24 + this.m13 * b.m34 + this.m14 * b.m44
+
+        // c21 = this.m21 * b.m11 + this.m22 * b.m21 + this.m23 * b.m31 + this.m24 * b.m41
+        // c22 = this.m21 * b.m12 + this.m22 * b.m22 + this.m23 * b.m32 + this.m24 * b.m42
+        // c23 = this.m21 * b.m13 + this.m22 * b.m23 + this.m23 * b.m33 + this.m24 * b.m43
+        // c24 = this.m21 * b.m14 + this.m22 * b.m24 + this.m23 * b.m34 + this.m24 * b.m44
+
+        // c31 = this.m31 * b.m11 + this.m32 * b.m21 + this.m33 * b.m31 + this.m34 * b.m41
+        // c32 = this.m31 * b.m12 + this.m32 * b.m22 + this.m33 * b.m32 + this.m34 * b.m42
+        // c33 = this.m31 * b.m13 + this.m32 * b.m23 + this.m33 * b.m33 + this.m34 * b.m43
+        // c34 = this.m31 * b.m14 + this.m32 * b.m24 + this.m33 * b.m34 + this.m34 * b.m44
+
+        // c41 = this.m41 * b.m11 + this.m42 * b.m21 + this.m43 * b.m31 + this.m44 * b.m41
+        // c42 = this.m41 * b.m12 + this.m42 * b.m22 + this.m43 * b.m32 + this.m44 * b.m42
+        // c43 = this.m41 * b.m13 + this.m42 * b.m23 + this.m43 * b.m33 + this.m44 * b.m43
+        // c44 = this.m41 * b.m14 + this.m42 * b.m24 + this.m43 * b.m34 + this.m44 * b.m44
+
+        return new OMat4x4(this.m11 * b.m11 + this.m12 * b.m21 + this.m13 * b.m31 + this.m14 * b.m41, this.m11 * b.m12 + this.m12 * b.m22 + this.m13 * b.m32 + this.m14 * b.m42, this.m11 * b.m13 + this.m12 * b.m23 + this.m13 * b.m33 + this.m14 * b.m43, this.m11 * b.m14 + this.m12 * b.m24 + this.m13 * b.m34 + this.m14 * b.m44,
+                           this.m21 * b.m11 + this.m22 * b.m21 + this.m23 * b.m31 + this.m24 * b.m41, this.m21 * b.m12 + this.m22 * b.m22 + this.m23 * b.m32 + this.m24 * b.m42, this.m21 * b.m13 + this.m22 * b.m23 + this.m23 * b.m33 + this.m24 * b.m43, this.m21 * b.m14 + this.m22 * b.m24 + this.m23 * b.m34 + this.m24 * b.m44,
+                           this.m31 * b.m11 + this.m32 * b.m21 + this.m33 * b.m31 + this.m34 * b.m41, this.m31 * b.m12 + this.m32 * b.m22 + this.m33 * b.m32 + this.m34 * b.m42, this.m31 * b.m13 + this.m32 * b.m23 + this.m33 * b.m33 + this.m34 * b.m43, this.m31 * b.m14 + this.m32 * b.m24 + this.m33 * b.m34 + this.m34 * b.m44,
+                           this.m41 * b.m11 + this.m42 * b.m21 + this.m43 * b.m31 + this.m44 * b.m41, this.m41 * b.m12 + this.m42 * b.m22 + this.m43 * b.m32 + this.m44 * b.m42, this.m41 * b.m13 + this.m42 * b.m23 + this.m43 * b.m33 + this.m44 * b.m43, this.m41 * b.m14 + this.m42 * b.m24 + this.m43 * b.m34 + this.m44 * b.m44);
+    }
 
     public OMat4x4 transpuesta()
     {
@@ -305,7 +335,7 @@ public class OMat4x4
         // m31   m32   m33   m34
         // m41   m42   m43   m44
 
-        // tranpuesta
+        // transpuesta
 
         // m11   m21   m31   m41
         // m12   m22   m32   m42
@@ -320,11 +350,25 @@ public class OMat4x4
 
     /*public OMat4x4 inversa()
     {
+        // m11   m12   m13   m14
+        // m21   m22   m23   m24
+        // m31   m32   m33   m34
+        // m41   m42   m43   m44
+
+        // inversa =
+
         return new OMat4x4();
     }
 
     public OMat4x4 identidad()
     {
+        // m11   m12   m13   m14
+        // m21   m22   m23   m24
+        // m31   m32   m33   m34
+        // m41   m42   m43   m44
+
+        // identidad =
+
         return new OMat4x4();
     }*/
 
