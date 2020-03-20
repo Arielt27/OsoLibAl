@@ -1,3 +1,4 @@
+// LIBRERIA DE ALGEBRA LINEA
 import hn.edu.ujcv.progra.*;
 
 public class Main
@@ -899,7 +900,7 @@ public class Main
 
                                     // MOSTRANDO RESULTADO DE TRANSPUESTA DE MATRIZ
 
-                                    System.out.println("El Determinante de la Matriz A es: " + Matriz.determinante());
+                                    System.out.println("La Transpuesta de la Matriz A es: " + Matriz.transpuesta());
                                     System.out.println(" ");
 
                                     // RETORNANDO A MENU PRINCIPAL
@@ -1039,8 +1040,8 @@ public class Main
                             System.out.println("1- Suma");
                             System.out.println("2- Resta");
                             System.out.println("3- Multiplicación");
-                            System.out.println("4- Determinante");
-                            System.out.println("5- Transpuesta");
+                            System.out.println("4- Transpuesta");
+                            System.out.println("5- Determinante");
                             System.out.println("6- Inversa");
                             System.out.println("7- Identidad");
                             Opc3 = lt.obtenerEnteroValidado("Seleccione Una Opción Correcta");
