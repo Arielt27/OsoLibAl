@@ -348,6 +348,11 @@ public class OMat4x4
                            m14, m24, m34, m44);
     }
 
+    /*public OMat4x4 determinante()
+    {
+        return new OMat4x4();
+    }
+
     /*public OMat4x4 inversa()
     {
         // m11   m12   m13   m14
