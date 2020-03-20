@@ -1519,32 +1519,607 @@ public class Main
                             System.out.println("4- Determinante");
                             System.out.println("5- Transpuesta");
                             System.out.println("6- Inversa");
-                            System.out.println("7- Rotación");
                             Opc3 = lt.obtenerEnteroValidado("Seleccione Una Opción Correcta");
 
                             switch (Opc3) // OPERACIONES CON MATRICES 4x4
                             {
                                 case 1: // SUMA DE MATRICES 4x4
+                                    System.out.println("SUMA DE MATRICES");
+
+                                    // OBTENIENDO DATOS MATRIZ A
+
+                                    System.out.println("MATRIZ A");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double s11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double s12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double s13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double s14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double s21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double s22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double s23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double s24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double s31 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double s32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double s33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double s34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double s41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double s42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double s43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double s44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+
+                                    // OBTENIENDO DATOS MATRIZ B
+
+                                    System.out.println("MATRIZ B");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double q11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double q12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double q13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double q14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double q21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double q22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double q23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double q24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double q31 = lt.obtenerDoubleValidado("Ingrese un valor");
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double q32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double q33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double q34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double q41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double q42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double q43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double q44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    OMat4x4 Mat1 = new OMat4x4(s11,s12,s13,s14,s21,s22,s23,s24,s31,s32,s33,s34,s41,s42,s43,s44);
+                                    OMat4x4 Mat2 = new OMat4x4(q11,q12,q13,q14,q21,q22,q23,q24,q31,q32,q33,q34,q41,q42,q43,q44);
+
+                                    // MOSTRANDO RESULTADO DE SUMA DE MATRICES
+
+                                    System.out.println("La Suma de las Matrices A + B es: " + Mat1.suma(Mat2));
+                                    System.out.println(" ");
+
+                                    // RETORNANDO A MENU PRINCIPAL
+
+                                    System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
+                                    System.out.println(" ");
+
+                                    System.out.println("1- Vectores");
+                                    System.out.println("2- Matrices");
+                                    System.out.println("3- Salir");
+                                    Opc = lt.obtenerEnteroValidado("Seleccione una Opción Válida");
+                                    System.out.println(" ");
 
                                     break;
 
                                 case 2: // RESTA DE MATRICES 4x4
+                                    System.out.println("RESTA DE MATRICES");
+
+                                    // OBTENIENDO DATOS MATRIZ A
+
+                                    System.out.println("MATRIZ A");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double a11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double a12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double a13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double a14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double a21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double a22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double a23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double a24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double a31 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double a32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double a33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double a34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double a41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double a42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double a43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double a44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+
+                                    // OBTENIENDO DATOS MATRIZ B
+
+                                    System.out.println("MATRIZ B");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double l11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double l12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double l13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double l14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double l21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double l22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double l23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double l24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double l31 = lt.obtenerDoubleValidado("Ingrese un valor");
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double l32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double l33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double l34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double l41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double l42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double l43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double l44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    OMat4x4 Ma1 = new OMat4x4(a11,a12,a13,a14,a21,a22,a23,a24,a31,a32,a33,a34,a41,a42,a43,a44);
+                                    OMat4x4 Ma2 = new OMat4x4(l11,l12,l13,l14,l21,l22,l23,l24,l31,l32,l33,l34,l41,l42,l43,l44);
+
+                                    // MOSTRANDO RESULTADO DE RESTA DE MATRICES
+
+                                    System.out.println("La Resta de las Matrices A - B es: " + Ma1.resta(Ma2));
+                                    System.out.println(" ");
+
+                                    // RETORNANDO A MENU PRINCIPAL
+
+                                    System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
+                                    System.out.println(" ");
+
+                                    System.out.println("1- Vectores");
+                                    System.out.println("2- Matrices");
+                                    System.out.println("3- Salir");
+                                    Opc = lt.obtenerEnteroValidado("Seleccione una Opción Válida");
+                                    System.out.println(" ");
 
                                     break;
 
                                 case 3: // MULTIPLICACIÓN DE MATRICES 4x4
+                                    System.out.println("MULTIPLICACIÓN DE MATRICES");
+
+                                    // OBTENIENDO DATOS MATRIZ A
+
+                                    System.out.println("MATRIZ A");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double d11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double d12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double d13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double d14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double d21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double d22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double d23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double d24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double d31 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double d32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double d33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double d34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double d41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double d42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double d43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double d44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+
+                                    // OBTENIENDO DATOS MATRIZ B
+
+                                    System.out.println("MATRIZ B");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double f11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double f12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double f13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double f14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double f21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double f22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double f23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double f24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double f31 = lt.obtenerDoubleValidado("Ingrese un valor");
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double f32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double f33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double f34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double f41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double f42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double f43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double f44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    OMat4x4 Matr1 = new OMat4x4(d11,d12,d13,d14,d21,d22,d23,d24,d31,d32,d33,d34,d41,d42,d43,d44);
+                                    OMat4x4 Matr2 = new OMat4x4(f11,f12,f13,f14,f21,f22,f23,f24,f31,f32,f33,f34,f41,f42,f43,f44);
+
+                                    // MOSTRANDO RESULTADO DE MULTIPLICACIÓN DE MATRICES
+
+                                    System.out.println("La Multiplicación de las Matrices A * B es: " + Matr1.multi(Matr2));
+                                    System.out.println(" ");
+
+                                    // RETORNANDO A MENU PRINCIPAL
+
+                                    System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
+                                    System.out.println(" ");
+
+                                    System.out.println("1- Vectores");
+                                    System.out.println("2- Matrices");
+                                    System.out.println("3- Salir");
+                                    Opc = lt.obtenerEnteroValidado("Seleccione una Opción Válida");
+                                    System.out.println(" ");
 
                                     break;
 
                                 case 4: // DETERMINANTE DE MATRICES 4x4
+                                    System.out.println("DETERMINANTE DE MATRIZ");
+
+                                    // OBTENIENDO DATOS MATRIZ A
+
+                                    System.out.println("MATRIZ A");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double w11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double w12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double w13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double w14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double w21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double w22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double w23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double w24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double w31 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double w32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double w33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double w34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double w41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double w42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double w43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double w44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    OMat4x4 Matr3 = new OMat4x4(w11,w12,w13,w14,w21,w22,w23,w24,w31,w32,w33,w34,w41,w42,w43,w44);
+
+                                    // MOSTRANDO RESULTADO DE DETERMINANTE DE MATRICES
+
+                                    System.out.println("El Determinante de la Matriz A es: " + Matr3.determinante());
+                                    System.out.println(" ");
+
+                                    // RETORNANDO A MENU PRINCIPAL
+
+                                    System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
+                                    System.out.println(" ");
+
+                                    System.out.println("1- Vectores");
+                                    System.out.println("2- Matrices");
+                                    System.out.println("3- Salir");
+                                    Opc = lt.obtenerEnteroValidado("Seleccione una Opción Válida");
+                                    System.out.println(" ");
 
                                     break;
 
                                 case 5: // TRANSPUESTA DE MATRICES 4x4
+                                    System.out.println("TRANSPUESTA DE MATRIZ");
+
+                                    // OBTENIENDO DATOS MATRIZ A
+
+                                    System.out.println("MATRIZ A");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double r11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double r12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double r13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double r14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double r21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double r22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double r23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double r24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double r31 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double r32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double r33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double r34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double r41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double r42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double r43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double r44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    OMat4x4 Matr4 = new OMat4x4(r11,r12,r13,r14,r21,r22,r23,r24,r31,r32,r33,r34,r41,r42,r43,r44);
+
+                                    // MOSTRANDO RESULTADO DE TRANSPUESTA DE MATRICES
+
+                                    System.out.println("La Transpuesta de la Matriz A es: " + Matr4.transpuesta());
+                                    System.out.println(" ");
+
+                                    // RETORNANDO A MENU PRINCIPAL
+
+                                    System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
+                                    System.out.println(" ");
+
+                                    System.out.println("1- Vectores");
+                                    System.out.println("2- Matrices");
+                                    System.out.println("3- Salir");
+                                    Opc = lt.obtenerEnteroValidado("Seleccione una Opción Válida");
+                                    System.out.println(" ");
 
                                     break;
 
-                                case 6: // INVERSA DE MATRICES 4x4
+                                case 6: // IDENTIDAD DE MATRICES 4x4
+                                    System.out.println("IDENTIDAD DE MATRIZ");
+
+                                    // OBTENIENDO DATOS MATRIZ A
+
+                                    System.out.println("MATRIZ A");
+                                    System.out.println("Ingrese el valor de M11: ");
+                                    double g11 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M12: ");
+                                    double g12 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M13: ");
+                                    double g13 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M14: ");
+                                    double g14 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M21: ");
+                                    double g21 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M22: ");
+                                    double g22 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M23: ");
+                                    double g23 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M24: ");
+                                    double g24 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M31: ");
+                                    double g31 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M32: ");
+                                    double g32 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M33: ");
+                                    double g33 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M34: ");
+                                    double g34 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M41: ");
+                                    double g41 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M42: ");
+                                    double g42 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M43: ");
+                                    double g43 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    System.out.println("Ingrese el valor de M44: ");
+                                    double g44 = lt.obtenerDoubleValidado("Ingrese un valor");
+
+                                    OMat4x4 Matr5 = new OMat4x4(g11,g12,g13,g14,g21,g22,g23,g24,g31,g32,g33,g34,g41,g42,g43,g44);
+
+                                    // MOSTRANDO RESULTADO DE IDENTIDAD DE MATRICES
+
+                                    System.out.println("La Identidad de la Matriz A es: " + Matr5.identidad());
+                                    System.out.println(" ");
+
+                                    // RETORNANDO A MENU PRINCIPAL
+
+                                    System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
+                                    System.out.println(" ");
+
+                                    System.out.println("1- Vectores");
+                                    System.out.println("2- Matrices");
+                                    System.out.println("3- Salir");
+                                    Opc = lt.obtenerEnteroValidado("Seleccione una Opción Válida");
+                                    System.out.println(" ");
 
                                     break;
                             }

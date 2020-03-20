@@ -348,21 +348,18 @@ public class OMat4x4
                            m14, m24, m34, m44);
     }
 
-    /*public OMat4x4 determinante()
+    public double determinante()
     {
-        return new OMat4x4();
-    }
+        double respuesta;
 
-    /*public OMat4x4 inversa()
-    {
-        // m11   m12   m13   m14
-        // m21   m22   m23   m24
-        // m31   m32   m33   m34
-        // m41   m42   m43   m44
+        OMat3x3 cofA = new OMat3x3(this.m22,this.m23,this.m24,this.m32,this.m33,this.m34,this.m42,this.m43,this.m44);
+        OMat3x3 cofB = new OMat3x3(this.m21,this.m23,this.m24,this.m31,this.m33,this.m34,this.m41,this.m43,this.m44);
+        OMat3x3 cofC = new OMat3x3(this.m21,this.m22,this.m24,this.m31,this.m32,this.m34,this.m41,this.m42,this.m44);
+        OMat3x3 cofD = new OMat3x3(this.m21,this.m22,this.m23,this.m31,this.m32,this.m33,this.m41,this.m42,this.m43);
 
-        // inversa =
+        respuesta = (this.m11 * cofA.determinante()) - (this.m12 * cofB.determinante()) + (this.m13 * cofC.determinante()) - (this.m14 * cofD.determinante());
 
-        return new OMat4x4();
+        return respuesta;
     }
 
     public OMat4x4 identidad()
@@ -372,8 +369,11 @@ public class OMat4x4
         // m31   m32   m33   m34
         // m41   m42   m43   m44
 
-        return new OMat4x4();
-    }*/
+        return new OMat4x4(1,0,0,0,
+                           0,1,0,0,
+                           0,0,1,0,
+                           0,0,0,1);
+    }
 
 
       // METODO TO STRING
