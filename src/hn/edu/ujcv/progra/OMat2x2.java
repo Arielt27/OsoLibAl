@@ -152,11 +152,10 @@ public class OMat2x2
         return new OMat2x2(m11,m12,m21,m22);
     }
 
-    /*public static OMat2x2 identidad()
+    public static OMat2x2 identidad()
     {
-        //TODO: implementar
-        return new OMat2x2();
-    }*/
+        return new OMat2x2(1,0,0,1);
+    }
 
 
     // METODO TO STRING

@@ -233,21 +233,53 @@ public class OMat3x3
         return det;
     }
 
-    /*public OMat3x3 inversa()
+    public OMat3x3 inversa()
     {
-        return new OMat3x3();
-    }*/
+        double r11 = 0, r12 = 0, r13 = 0;
+        double r21 = 0, r22 = 0, r23 = 0;
+        double r31 = 0, r32 = 0, r33 = 0;
+        double det;
+        OMat3x3 a = new OMat3x3(r11, r12, r13,
+                                r21, r22, r23,
+                                r31, r32, r33);
+                a = this.transpuesta();
+                det = this.determinante();
 
-    /*public OMat3x3 identidad()
+        OMat2x2 d11 = new OMat2x2(this.m22, this.m32, this.m23, this.m33);
+        OMat2x2 d12 = new OMat2x2(this.m12, this.m32, this.m13, this.m33);
+        OMat2x2 d13 = new OMat2x2(this.m12, this.m22, this.m13, this.m23);
+        OMat2x2 d21 = new OMat2x2(this.m21, this.m31, this.m23, this.m33);
+        OMat2x2 d22 = new OMat2x2(this.m11, this.m31, this.m13, this.m33);
+        OMat2x2 d23 = new OMat2x2(this.m11, this.m21, this.m13, this.m23);
+        OMat2x2 d31 = new OMat2x2(this.m21, this.m31, this.m22, this.m32);
+        OMat2x2 d32 = new OMat2x2(this.m11, this.m31, this.m12, this.m32);
+        OMat2x2 d33 = new OMat2x2(this.m11, this.m21, this.m12, this.m22);
+
+        r11  =  Math.pow(-1,2) * d11.determinante();
+        r12  =  Math.pow(-1,3) * d12.determinante();
+        r13  =  Math.pow(-1,4) * d13.determinante();
+        r21  =  Math.pow(-1,3) * d21.determinante();
+        r22  =  Math.pow(-1,4) * d22.determinante();
+        r23  =  Math.pow(-1,5) * d23.determinante();
+        r31  =  Math.pow(-1,4) * d31.determinante();
+        r32  =  Math.pow(-1,5) * d32.determinante();
+        r33  =  Math.pow(-1,6) * d33.determinante();
+
+        return new OMat3x3(r11/det,r12/det,r13/det,
+                           r21/det,r22/det,r23/det,
+                           r31/det,r32/det,r33/det);
+    }
+
+    public OMat3x3 identidad()
     {
         // m11  m12  m13
         // m21  m22  m23
         // m31  m32  m33
 
-        // identidad =
-m
-        return new OMat3x3();
-    }*/
+        return new OMat3x3(1, 0, 0,
+                           0, 1, 0,
+                           0, 0, 1);
+    }
 
     // METODO TO STRING
     @Override

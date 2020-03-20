@@ -372,8 +372,6 @@ public class OMat4x4
         // m31   m32   m33   m34
         // m41   m42   m43   m44
 
-        // identidad =
-
         return new OMat4x4();
     }*/
 
