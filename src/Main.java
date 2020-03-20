@@ -1,245 +1,65 @@
-import hn.edu.ujcv.progra.*;
+import hn.edu.ujcv.progra.LectorTeclado;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        // CREACIÓN DE LOS OBJETOS (VECTOREmS)
+         // CREANDO OBJETO LECTOR TECLADO
 
-          // Vectores en R2
+        LectorTeclado lt = LectorTeclado.getInstance();
 
-        /*OVecR2 V1 = new OVecR2(-5,4);
+         // PROGRAMA PRINCIPAL
 
-        OVecR2 V2 = new OVecR2(-3,-8);
-
-        OVecR2 V3 = new OVecR2(-11,-2);
-
-          // Vectores en R3
-
-        OVecR3 Ve1 = new OVecR3(2,6,3);
-
-        OVecR3 Ve2 = new OVecR3(1,3,4);
-
-        OVecR3 Ve3 = new OVecR3(-3,-2,5);
-
-        OVecR3 Ve4 = new OVecR3(6,-10,-1);
-
-          // Vectores en R4
-
-        OVecR4 Vec1 = new OVecR4(5,7,6,3);
-
-        OVecR4 Vec2 = new OVecR4(1,2,3,4);
-
-        OVecR4 Vec3 = new OVecR4(9,1,0,6);
-
-          // Matrices 2x2*/
-
-        /*OMat2x2 M1 = new OMat2x2(-5,3,4,7);
-
-        OMat2x2 M2 = new OMat2x2(9,0,2,-5);
-
-        OMat2x2 M3 = new OMat2x2(5,3,-1,4);
-
-        OMat2x2 M4 = new OMat2x2(7,5,-2,9);*/
-
-          // Matrices 3x3
-
-        /*OMat3x3 Ma1 = new OMat3x3(0,-7,3,2,4,-1,12,7,-6);
-
-        OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
-
-        OMat3x3 Ma3 = new OMat3x3(-2,4,5,6,7,-3,3,0,2);*/
-
-          // Matrices 4x4
-
-        OMat4x4 M1 = new OMat4x4(1,2,3,4,
-                                 5,6,7,8,
-                                 9,10,11,12,
-                                13, 14,15,16);
-
-        OMat4x4 M2 = new OMat4x4(-1,5,-1,6,
-                                  4,5,10,8,
-                                 -4,8,9,3,
-                                  0,-8,-5,3);
-
-
-
-        // PROGRAMA PRINCIPAL
-
-        System.out.println("***LIBRERIA DE ALGEBRA LINEAL***");
+        System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
         System.out.println(" ");
 
-          // Matrices 4x4
-
-        System.out.println("MATRICES 4x4");
+        System.out.println("1- Vectores");
+        System.out.println("2- Matrices");
+        System.out.println("3- Salir");
+        int Opc = lt.obtenerEnteroValidado("Seleccione una Opción Válida");
         System.out.println(" ");
 
-        System.out.println("La Matriz 1 es: " + M1);                        // Mostrando Objeto Matriz llamado M1
-        System.out.println(" ");
+         // INICIO DE CICLO WHILE
 
-        System.out.println("La Matriz 2 es: " + M2);                        // Mostrando Objeto Matriz llamado M2
-        System.out.println(" ");
+        while (Opc != 3)
+        {
+             //INICIO DE SWITCH
 
-        System.out.println("La Suma de Matrices es: " + M1.suma(M2));       // Aplicando Metodo Suma de Clase OMat4x4
-        System.out.println(" ");
+            switch (Opc)
+            {
+                case 1: // VECTORES
 
-        System.out.println("La Resta de Matrices es: " + M1.resta(M2));     // Aplicando Metodo Resta de Clase OMat4x4
-        System.out.println(" ");
+                    System.out.println("1- Vectores R2");
+                    System.out.println("2- Vectores R3");
+                    System.out.println("3- Vectores R4");
+                    int Opc2 = lt.obtenerEnteroValidado("Seleccione una Opción Correcta Por Favor");
 
+                    System.out.println(Opc2);
 
-          /*// Matrices 3x3
+                    break;
 
-        System.out.println("MATRICES 3x3");
-        System.out.println(" ");
+                case 2: // MATRICES
+                    System.out.println("1- Matrices 2x2");
+                    System.out.println("2- Matrices 3x3");
+                    System.out.println("3- Matrices 4x4");
+                    int Opc3 = lt.obtenerEnteroValidado("Seleccione una Opción Correcta Por Favor");
 
-        System.out.println("La Matriz 1 es: " + Ma1);                        // Mostrando Objeto Matriz llamado Ma1
-        System.out.println(" ");
+                    System.out.println(Opc3);
 
-        System.out.println("La Matriz 1 es: " + Ma2);                        // Mostrando Objeto Matriz llamado Ma2
-        System.out.println(" ");
+                    break;
 
-        System.out.println("La Suma de Matrices es: " + Ma1.Suma(Ma2));      // Aplicando Metodo Suma de Clase OMat3x3
-        System.out.println(" ");
+                default:
 
-        System.out.println("La Resta de Matrices es: " + Ma1.Resta(Ma2));    // Aplicando Metodo Resta de Clase OMat3x3
-        System.out.println(" ");
+                    System.out.println("*******LIBRERIA DE ALGEBRA LINEAL*******");
+                    System.out.println(" ");
 
-        System.out.println("La Mult. de Matrices es: " + Ma1.Multi(Ma2));    // Aplicando Metodo multi de Clase OMat3x3
-        System.out.println(" ");
+                    System.out.println("1- Vectores");
+                    System.out.println("2- Matrices");
+                    System.out.println("3- Salir");
+                    Opc = lt.obtenerEnteroValidado("Seleccione una Opción Correcta Por Favor");
 
-        System.out.println("La Transp. de Matriz es: " + Ma3.transpuesta()); // Aplicando Metodo transpuesta de Clase OMat3x3
-        System.out.println(Ma3);
-
-        System.out.println("El det. de Matriz es: " + Ma3.determinante());   // Aplicando Metodo transpuesta de Clase OMat3x3
-        System.out.println(" ");*/
-
-
-          // Matrices 2x2
-
-        /*System.out.println("MATRICES 2x2");
-        System.out.println(" ");
-
-        System.out.println("La Matriz 1 es: " + M1);                       // Mostrando Objeto Matriz llamado M1
-        System.out.println(" ");
-
-        System.out.println("La Matriz 2 es: " + M2);                       // Mostrando Objeto Matriz llamado M2
-        System.out.println(" ");
-
-        System.out.println("La Matriz 3 es: " + M3);                       // Mostrando Objeto Matriz llamado M3
-        System.out.println(" ");
-
-        System.out.println("La Matriz 4 es: " + M4);                       // Mostrando Objeto Matriz llamado M4
-        System.out.println(" ");
-
-        System.out.println("La Suma de Matrices es: " + M1.suma(M2));      // Aplicando Metodo Suma de Clase OMat2x2
-        System.out.println(" ");
-
-        System.out.println("La Resta de Matrices es: " + M1.resta(M2));    // Aplicando Metodo Resta de Clase OMat2x2
-        System.out.println(" ");
-
-        System.out.println("La Multip. de Matrices es: " + M1.mult(M2));   // Aplicando Metodo multi de Clase OMat2x2
-        System.out.println(" ");
-
-        System.out.println("El Det. de Matriz C es: " + M3.determinante());// Aplicando Metodo determinante de Clase OMat2x2
-        System.out.println(" ");
-
-        System.out.println("La Inversa de Matriz D es: " + M4.inversa());  // Aplicando Metodo inversa de Clase OMat2x2
-        System.out.println(" ");
-
-        System.out.println("La Transpuesta de Matriz D es: " + M4.transpuesta()); // Aplicando Metodo transpuesta de Clase OMat2x2
-        System.out.println(" ");*/
-
-
-          /*// Vectores en R2
-
-        System.out.println("VECTORES EN R2");
-        System.out.println(" ");
-
-        System.out.println("El Vector 1 es: " + V1);                       // Mostrando Objeto Vector llamado V1
-        System.out.println(" ");
-
-        System.out.println("El Vector 2 es: " + V2);                       // Mostrando Objeto Vector llamado V2
-        System.out.println(" ");
-
-        System.out.println("El Vector 3 es: " + V3);                       // Mostrando Objeto Vector llamado V3
-        System.out.println(" ");
-
-        System.out.println("Suma de Vectores en R2 " + V2.suma(V1));       // Aplicando Metodo Suma de Clase OvecR2
-        System.out.println(" ");
-
-        System.out.println("Resta de Vectores en R2 " + V3.resta(V2));     // Aplicando Metodo Resta de Clase OvecR2
-        System.out.println(" ");
-
-        System.out.println("Producto Punto de Vectores en R2 "
-                                           + V1.prodPunto(V2));            // Aplicando Metodo prodPunto de Clase OVecR2
-        System.out.println(" ");
-
-        System.out.println("Magnitud Del Vector en R2: " + V3.magnitud()); // Aplicando Metodo Magnitud de Clase OVecR2
-        System.out.println(" ");
-
-          // Vectores en R3
-
-        System.out.println("VECTORES EN R3");
-        System.out.println(" ");
-
-        System.out.println("El Vector 1 es: " + Ve1);                      // Mostrando Objeto Vector llamado Ve1
-        System.out.println(" ");
-
-        System.out.println("El Vector 2 es: " + Ve2);                      // Mostrando Objeto Vector llamado Ve2
-        System.out.println(" ");
-
-        System.out.println("El Vector 3 es: " + Ve3);                      // Mostrando Objeto Vector llamado Ve3
-        System.out.println(" ");
-
-        System.out.println("El Vector 4 es: " + Ve4);                      // Mostrando Objeto Vector llamado Ve4
-        System.out.println(" ");
-
-        System.out.println("Suma de Vectores en R3 " + Ve2.suma(Ve1));     // Aplicando Metodo Suma de Clase OvecR3
-        System.out.println(" ");
-
-        System.out.println("Resta de Vectores en R3 " + Ve1.resta(Ve3));   // Aplicando Metodo Resta de Clase OvecR3
-        System.out.println(" ");
-
-        System.out.println("Producto Punto de Vectores en R3 "
-                                           + Ve1.prodPunto(Ve2));          // Aplicando Metodo prodPunto de Clase OVecR3
-        System.out.println(" ");
-
-        System.out.println("ProdCruz de Vectores en R3 "
-                                           + Ve3.prodCruz(Ve4));           // Aplicando Metodo prodCruz de Clase OvecR3
-        System.out.println(" ");
-
-        System.out.println("Magnitud Del Vector en R3: " + Ve3.magnitud());// Aplicando Metodo Magnitud de Clase OVecR3
-        System.out.println(" ");
-
-
-
-          // VECTORES EN R4
-
-        System.out.println("VECTORES EN R4");
-        System.out.println(" ");
-
-        System.out.println("El Vector 1 es: " + Vec1);                     // Mostrando Objeto Vector llamado Vec1
-        System.out.println(" ");
-
-        System.out.println("El Vector 2 es: " + Vec2);                     // Mostrando Objeto Vector llamado Vec2
-        System.out.println(" ");
-
-        System.out.println("El Vector 3 es: " + Vec3);                     // Mostrando Objeto Vector llamado Vec3
-        System.out.println(" ");
-
-        System.out.println("Suma de Vectores en R4 " + Vec1.suma(Vec2));   // Aplicando Metodo Suma de Clase OvecR4
-        System.out.println(" ");
-
-        System.out.println("Resta de Vectores en R4 " + Vec2.resta(Vec3)); // Aplicando Metodo Resta de Clase OvecR4
-        System.out.println(" ");
-
-        System.out.println("Producto Punto de Vectores en R4 "
-                                           + Vec1.prodPunto(Vec2));        // Aplicando Metodo prodPunto de Clase OVecR4
-        System.out.println(" ");
-
-        System.out.println("Magnitud Del Vector en R4: "
-                                           + Vec3.magnitud());             // Aplicando Metodo Magnitud de Clase OVecR4
-        System.out.println(" ");*/
-
+                    break;
+            }
+        }
     }
 }
