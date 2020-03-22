@@ -103,6 +103,11 @@ public class OVecR4
         return mag;
     }
 
+    public OVecR4 quatSuma(OVecR4 b)
+    {
+        return new OVecR4((this.x + b.x), (this.y + b.y),(this.z + b.z),(this.t + b.t));
+    }
+
 
     // METODO TO STRING
     @Override
