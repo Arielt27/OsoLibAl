@@ -157,6 +157,11 @@ public class OMat2x2
         return new OMat2x2(1,0,0,1);
     }
 
+    public OVecR2 MporV(OVecR2 a)
+    {
+        return new OVecR2(a.getX()*this.m11 + a.getY()*this.m21,a.getX()*this.m12 + a.getY()*this.m22);
+    }
+
 
     // METODO TO STRING
     @Override
