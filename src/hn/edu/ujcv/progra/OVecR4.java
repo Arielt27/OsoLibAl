@@ -81,7 +81,7 @@ public class OVecR4
 
     public OVecR4 resta(OVecR4 b)
     {
-        return new OVecR4(this.x - b.x, this.y - b.y, this.z - b.z, this.t + b.t);
+        return new OVecR4(this.x - b.x, this.y - b.y, this.z - b.z, this.t - b.t);
     }
 
     public double prodPunto(OVecR4 b)
